@@ -12,7 +12,7 @@ NUMMESSAGES=`wc -l recipients.csv | awk '{print $1}'`
 echo loading $NUMMESSAGES messages
 jmeter --nongui -l loadmessageslog.txt --testfile load-messages.jmx
 
-NUMCONTENT=`wc -l content.txt | awk '{print $1}'`
+NUMCONTENT=`wc -l file-uploads.csv | awk '{print $1}'`
 echo loading $NUMCONTENT files
 jmeter --nongui -l loadfileslog.txt --testfile load-files.jmx
 
